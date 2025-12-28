@@ -11,11 +11,9 @@
       background-color: rgb(253, 252, 248);
       font-family: 'Trebuchet MS', Arial, sans-serif;
       margin: 0;
-      padding: 0px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      padding-bottom: calc(20px + env(safe-area-inset-bottom));
     }
 
     .header-logo {
@@ -29,31 +27,24 @@
     hr {
       margin: 15px auto;
       width: 95%;
+      border-color: rgba(252, 238, 224, 0.78);
     }
 
-    h2{
-        font-size: xx-large;
+    h2 {
+      text-align: center;
+      font-size: 200%;
+    }
+
+    .text {
+      text-align: center;
     }
 
     .items {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(5, minmax(260px, 1fr));
       gap: 32px;
       padding: 20px;
       justify-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .items {
-        grid-template-columns: 1fr;
-        padding: 10px;
-      }
-    }
-
-    @media (min-width: 900px) {
-      .items {
-        grid-template-columns: repeat(5, 1fr);
-      }
     }
 
     .item-display {
@@ -63,30 +54,45 @@
       border-radius: 20px;
       padding: 15px;
       box-shadow: 0 0 20px rgba(104, 70, 41, 0.6);
-      margin-bottom: 10px;
-    }
-
-    .item-display img {
-      width: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .item-display h2 {
       text-align: center;
-      margin-top: 15px;
     }
 
-    .contact-section {
-      width: min(1000px, 95%);
-      margin: 10px auto 0;
-      padding: 0 10px;
+    .item-display > img {
+      width: 100%;
+      border-radius: 15px;
+      display: block;
     }
 
-    .contact-title {
-      margin: 0 0 10px;
-      font-size: 1.5rem;
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 10px;
       text-align: left;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      color: #4a3a2a;
+    }
+
+    .info-row img {
+      width: 32px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .items {
+        grid-template-columns: 1fr;
+      }
+
+      .item-display {
+        max-width: 90%;
+      }
     }
 
     footer {
@@ -124,81 +130,506 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
+    .contact-section {
+      width: min(1000px, 95%);
+      margin: 10px auto 0;
+      padding: 0 10px;
+    }
+
+    .contact-title {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  </style>
   </style>
 </head>
 
 <body>
 
-  <img src="/images/assets/logo.png" alt="Nina's Joy Accessories Logo" class="header-logo" />
-  <hr />
+  <img src="/images/assets/logo.png" alt="Logo" class="header-logo" />
+  <hr>
 
   <div class="items">
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/white_bag3.png" alt="Product image"> 
-        <h2>ΑΣΠΡΗ [3] ΤΣΑΝΤΑ</h2> 
+
+    <div class="item-display">
+      <img src="images/products/white_bag3.png" alt="White bag 3" />
+
+      <h2>
+
+        ΑΣΠΡΗ [3] ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/light_blue_bag.png" alt="Product image"> 
-        <h2>ΓΑΛΑΖΙΑ ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/light_blue_bag.png" alt="Light blue bag" />
+
+      <h2>
+
+        ΓΑΛΑΖΙΑ ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/black_bag.png" alt="Product image"> 
-        <h2>ΜΑΥΡΗ ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/black_bag.png" alt="Black bag" />
+
+      <h2>
+
+        ΜΑΥΡΗ ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/brown_bag2.png" alt="Product image"> 
-        <h2>ΚΑΦΕ [2] ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/brown_bag2.png" alt="Brown bag 2" />
+
+      <h2>
+
+        ΚΑΦΕ [2] ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/purple_bag.png" alt="Product image"> 
-        <h2>ΜΩΒ ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/purple_bag.png" alt="Purple bag" />
+
+      <h2>
+
+        ΜΩΒ ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/white_bag2.png" alt="Product image"> 
-        <h2>ΑΣΠΡΗ [2] ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/white_bag2.png" alt="White bag 2" />
+
+      <h2>
+
+        ΑΣΠΡΗ [2] ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-     <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/blue_bag.png" alt="Product image"> 
-        <h2>ΜΠΛΕ ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/blue_bag.png" alt="Blue bag" />
+
+      <h2>
+
+        ΜΠΛΕ ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/green_something.png" alt="Product image"> 
-        <h2>ΠΡΑΣΙΝΟΣ ΦΑΚΕΛΟΣ</h2> 
+    <div class="item-display">
+      <img src="images/products/green_something.png" alt="Green folder" />
+
+      <h2>
+
+        ΠΡΑΣΙΝΟΣ ΦΑΚΕΛΟΣ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/brown_bag.png" alt="Product image"> 
-        <h2>ΚΑΦΕ [1] ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/brown_bag.png" alt="Brown bag 1" />
+
+      <h2>
+
+        ΚΑΦΕ [1] ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="item-display" style="display: flex; flex-direction: column; align-items: center;"> 
-        <img src="images/products/white_bag.png" alt="Product image"> 
-        <h2>ΑΣΠΡΗ [1] ΤΣΑΝΤΑ</h2> 
+    <div class="item-display">
+      <img src="images/products/white_bag.png" alt="White bag 1" />
+
+      <h2>
+
+        ΑΣΠΡΗ [1] ΤΣΑΝΤΑ
+
+      </h2>
+
+      <div class="product-info">
+        <span class="text" style="color: rgb(84, 84, 84);">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam arum nisi quos tempore perferendis.
+
+        </span>
+
+        <div class="info-row">
+          <img src="images/assets/thread.png" alt="Thread" />
+          <span>
+
+            Wool
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/size.png" alt="Size" />
+          <span>
+
+            15cm x 30cm
+
+          </span>
+        </div>
+
+        <div class="info-row">
+          <img src="images/assets/euro.png" alt="Price" />
+          <span>
+
+            15,00€
+
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <hr />
+  <span style="text-align: center; color: rgb(253, 252, 248);">v1</span> 
+  
+  <hr>
 
   <div class="contact-section">
-    <h2 class="contact-title">Επικοινωνία:</h2>
-
+    <h2 class="contact-title">Επικοινωνία:</h2> 
+    
     <footer>
       <ul>
-        <li><img src="././images/assets/phone.png" alt="Phone icon">+30 693 182 8537</li>
-        <li><img src="././images/assets/facebook.png" alt="Facebook icon">Chris Vomvolaki</li>
-        <li><img src="././images/assets/instagram.png" alt="Instagram icon">ninas_joy_women_accessories_</li>
+        <li><img src="././images/assets/phone.png" alt="Phone icon"><a href="tel:+30%20693%20182%208537" style="color: black;">+30 693 182 8537</a></li>
+        <li><img src="././images/assets/facebook.png" alt="Facebook icon"><a href="https://m.facebook.com/profile.php?id=61584755253178" style="color: rgb(24, 119, 242);">Chris Vomvolaki</a></li>
+        <li><img src="././images/assets/instagram.png" alt="Instagram icon"><a href="https://www.instagram.com/ninas_joy_women_accessories_" style="color: rgb(255, 49, 169);">ninas_joy_women_accessories_</a></li>
       </ul>
     </footer>
   </div>
 
+  <br>
 </body>
 </html>
-
-
