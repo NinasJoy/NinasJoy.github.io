@@ -1,160 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="/images/assets/bag.png" />
   <title>Nina's Joy Accessories</title>
-
-  <style>
-    body {
-      background-color: rgb(253, 252, 248);
-      font-family: 'Trebuchet MS', Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .header-logo {
-      display: block;
-      margin: 30px auto 10px;
-      width: 300px;
-      height: 100px;
-      object-fit: contain;
-    }
-
-    hr {
-      margin: 15px auto;
-      width: 95%;
-      border-color: rgba(252, 238, 224, 0.78);
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 200%;
-    }
-
-    .text {
-      text-align: center;
-    }
-
-    .items {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(260px, 1fr));
-      gap: 32px;
-      padding: 20px;
-      justify-items: center;
-    }
-
-    .item-display {
-      background: rgb(249, 231, 220);
-      width: 100%;
-      max-width: 320px;
-      border-radius: 20px;
-      padding: 15px;
-      box-shadow: 0 0 20px rgba(104, 70, 41, 0.6);
-      text-align: center;
-    }
-
-    .item-display > img {
-      width: 100%;
-      border-radius: 15px;
-      display: block;
-    }
-
-    .product-info {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    .info-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.2rem;
-      color: #4a3a2a;
-    }
-
-    .info-row img {
-      width: 32px;
-      height: auto;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 768px) {
-      .items {
-        grid-template-columns: 1fr;
-      }
-
-      .item-display {
-        max-width: 90%;
-      }
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 0 0 calc(40px + env(safe-area-inset-bottom));
-    }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    footer li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1rem;
-      background: rgba(249, 231, 220, 0.55);
-      border-radius: 30px;
-      padding: 12px 14px;
-      box-shadow: 0 0 5px rgba(104, 70, 41, 0.6);
-    }
-
-    footer img {
-      width: 24px;
-      height: 24px;
-    }
-
-    @media (min-width: 900px) {
-      footer ul {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .contact-section {
-      width: min(1000px, 95%);
-      margin: 10px auto 0;
-      padding: 0 10px;
-    }
-
-    .contact-title {
-      margin: 0 0 10px;
-      font-size: 1.5rem;
-      text-align: left;
-    }
-  </style>
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <img src="/images/assets/logo.png" alt="Logo" class="header-logo" />
+  
   <hr>
 
   <div class="items">
 
+    <audio autoplay id="myaudio">
+    <source src="/music/christmas.mp3">
+    </audio>
+
+
+    <script>
+      var audio = document.getElementById("myaudio")
+      audio.volume = 0.2;
+    </script>
+
+    <!------------------------------------------------------------------------------>
+
     <div class="item-display">
-      <img src="images/products/white_bag3.png" alt="White bag 3" />
+      <img src="/images/products/white_bag3.png" alt="White bag 3" />
 
       <h2>
 
@@ -171,7 +46,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -180,7 +55,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -189,7 +64,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -217,7 +92,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -226,7 +101,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -235,7 +110,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -263,7 +138,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -272,7 +147,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -281,7 +156,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -309,7 +184,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -318,7 +193,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -327,7 +202,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -355,7 +230,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -364,7 +239,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -373,7 +248,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -401,7 +276,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -410,7 +285,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -419,7 +294,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -447,7 +322,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -456,7 +331,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -465,7 +340,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -493,7 +368,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -502,7 +377,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -511,7 +386,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -539,7 +414,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -548,7 +423,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -557,7 +432,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -585,7 +460,7 @@
         </span>
 
         <div class="info-row">
-          <img src="images/assets/thread.png" alt="Thread" />
+          <img src="/images/assets/thread.png" alt="Thread" />
           <span>
 
             Wool
@@ -594,7 +469,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/size.png" alt="Size" />
+          <img src="/images/assets/size.png" alt="Size" />
           <span>
 
             15cm x 30cm
@@ -603,7 +478,7 @@
         </div>
 
         <div class="info-row">
-          <img src="images/assets/euro.png" alt="Price" />
+          <img src="/images/assets/euro.png" alt="Price" />
           <span>
 
             15,00€
@@ -614,24 +489,56 @@
     </div>
   </div>
 
-  <span style="text-align: center; color: rgb(253, 252, 248);">v2</span> 
-  
-  <hr>
+  <!------------------------------------------------------------------------------>
 
+  <span style="text-align: center; color: rgb(253, 252, 248);">v3</span> 
+  <hr>
   <div class="contact-section">
     <h2 class="contact-title">Επικοινωνία:</h2> 
-    
     <footer>
       <ul>
-        <li><img src="././images/assets/phone.png" alt="Phone icon"><a href="tel:+30%20693%20182%208537" style="color: black;">+30 693 182 8537</a></li>
-        <li><img src="././images/assets/facebook.png" alt="Facebook icon"><a href="https://m.facebook.com/profile.php?id=61584755253178" style="color: rgb(24, 119, 242);">Chris Vomvolaki</a></li>
-        <li><img src="././images/assets/Instagram.png" alt="Instagram icon"><a href="https://www.instagram.com/ninas_joy_women_accessories_" style="color: rgb(255, 49, 169);">ninas_joy_women_accessories_</a></li>
+        <a class="contact-element" href="tel:+30%20693%20182%208537">
+          <li>
+            <img src="././/images/assets/phone.png" alt="Phone icon">
+            
+            <span  style="color: black;">
+          
+            +30 693 182 8537
+
+            </span>
+
+          </li>
+        </a>
+  
+        <a class="contact-element" href="https://m.facebook.com/profile.php?id=61584755253178">
+          <li>
+            <img src="././/images/assets/facebook.png" alt="Facebook icon">
+            
+            <span  style="color: rgb(24, 119, 242);">
+          
+            Chris Vomvolaki
+
+            </span>
+
+          </li>
+        </a>
+
+        <a class="contact-element" href="https://www.instagram.com/ninas_joy_women_accessories_">
+          <li>
+            <img src="././/images/assets/Instagram.png" alt="Instagram icon">
+            
+            <span  style="color: rgb(255, 49, 169);">
+          
+            ninas_joy_women_accessories_
+
+            </span>
+
+          </li>
+        </a>
+
       </ul>
     </footer>
   </div>
-
   <br>
 </body>
 </html>
-
-
