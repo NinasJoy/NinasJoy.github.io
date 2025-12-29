@@ -58,6 +58,7 @@ h2 {
     width: 100%;
     border-radius: 15px;
     display: block;
+    transform-origin: center center;
 }
 
 .product-info {
@@ -144,19 +145,27 @@ footer li {
     box-shadow: 0 0 5px rgba(104, 70, 41, 0.6);
 
     transform: scale(1);
-    transition: transform 0.5s ease;
     will-change: transform;
     backface-visibility: hidden;
-}
-
-footer li:hover{
-    transform: scale(1.06,1.06);
 }
 
 footer li:active{
     transform: scale(0.95,0.95);
 }
 
-.item-display:hover {
+@media (hover: hover) {
+  .item-display:hover {
     transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .item-display {
+    transform: scale(0.95);
+    transition: transform 0.35s ease;
+  }
+
+  .item-display.is-center {
+    transform: scale(1.08);
+  }
 }
