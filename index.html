@@ -9,6 +9,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    const items = document.querySelectorAll(".item-display");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-center");
+          } else {
+            entry.target.classList.remove("is-center");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-40% 0px -40% 0px", 
+        threshold: 0
+      }
+    );
+
+    items.forEach(item => observer.observe(item));
+  }
+</script>
+
 <body>
   <img src="/images/assets/logo.png" alt="Logo" class="header-logo" />
   
@@ -491,54 +516,11 @@
 
   <!------------------------------------------------------------------------------>
 
-  <span style="text-align: center; color: rgb(253, 252, 248);">v3</span> 
+  <span style="text-align: center; color: rgb(253, 252, 248);">v4</span> 
   <hr>
-  <div class="contact-section">
-    <h2 class="contact-title">Επικοινωνία:</h2> 
-    <footer>
-      <ul>
-        <a class="contact-element" href="tel:+30%20693%20182%208537">
-          <li>
-            <img src="././/images/assets/phone.png" alt="Phone icon">
-            
-            <span  style="color: black;">
-          
-            +30 693 182 8537
-
-            </span>
-
-          </li>
-        </a>
   
-        <a class="contact-element" href="https://m.facebook.com/profile.php?id=61584755253178">
-          <li>
-            <img src="././/images/assets/facebook.png" alt="Facebook icon">
-            
-            <span  style="color: rgb(24, 119, 242);">
-          
-            Chris Vomvolaki
+  
 
-            </span>
-
-          </li>
-        </a>
-
-        <a class="contact-element" href="https://www.instagram.com/ninas_joy_women_accessories_">
-          <li>
-            <img src="././/images/assets/Instagram.png" alt="Instagram icon">
-            
-            <span  style="color: rgb(255, 49, 169);">
-          
-            ninas_joy_women_accessories_
-
-            </span>
-
-          </li>
-        </a>
-
-      </ul>
-    </footer>
-  </div>
   <br>
 </body>
 </html>
